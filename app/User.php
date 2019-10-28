@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
- 
+
     public function reservations()
     {
         return $this->hasMany('App\reservation');

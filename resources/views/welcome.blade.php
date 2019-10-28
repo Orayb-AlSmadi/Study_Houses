@@ -1,3 +1,5 @@
+{{-- @include(app_path()."/resources/img")--}}
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -87,7 +89,7 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://images.8tracks.com/cover/i/010/004/880/original-475.jpg?rect=160,0,960,960&q=98&fm=jpg&fit=max&w=640&h=640" alt="First slide">
+                            <img class="d-block w-100" src="{{asset('img/img1.jpg')}}" alt="First slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="../img/img2.jpg" alt="Second slide">

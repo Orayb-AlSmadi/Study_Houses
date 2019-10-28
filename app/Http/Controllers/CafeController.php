@@ -12,9 +12,16 @@ class CafeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+
+        $options= ($request->all());
+//        dd($options);
+        $results = Cafe::where($options)->get();
+//
+//
+        return view('selectCafe', compact('results'));
+
     }
 
     /**

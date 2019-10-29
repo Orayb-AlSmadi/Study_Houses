@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Cafe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CafeController extends Controller
 {
@@ -14,7 +14,7 @@ class CafeController extends Controller
      */
     public function index(Request $request)
     {
-
+//dd(Auth::id());
         $options= ($request->all());
 //        dd($options);
         $results = Cafe::where($options)->get();

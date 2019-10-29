@@ -37,11 +37,12 @@
                                 </div>
                             @endif
 
-                            <form method="GET" action="/cafe">
+                            <form method="POST" action="/Reservation">
+                                @csrf
                                 <div class="form-row col-md-4">
                                     <div class="form-group ">
                                         <label for="inputState">Available Study Houses </label>
-                                        <select name="address" id="inputState" class="form-control">
+                                        <select name="cafe_id" id="inputState" class="form-control">
                                             <option selected>Choose...</option>
                                             @for($i=0;$i<count($results);$i++){
                                             <option value="{{$results[$i]->id}}">{{$results[$i]->cafe_name}}</option>
@@ -53,13 +54,13 @@
                                         <label for="inputState">Chairs number</label>
                                         <div class="input-group-prepend">
                                             <input type="number" min="1" class="form-control"
-                                                   aria-label="Amount (to the nearest dollar)">
+                                                   name="chairs">
                                         </div>
                                         <div class="input-group ">
                                             <label for="inputState">Hours</label>
                                             <div class="input-group-prepend">
                                                 <input type="number" min="1" class="form-control"
-                                                       aria-label="Amount (to the nearest dollar)">
+                                                    name="hours"  >
                                             </div>
                                         </div>
 
@@ -69,6 +70,13 @@
                                                 <input type="date" name="date">
                                             </div>
                                         </div>
+
+                                        <label for="appt">Choose a time for your reservation:</label>
+
+                                        <input type="time" id="appt" name="start"
+                                               min="07:00" max="19:00" required>
+
+                                        <small>Study house hours are 7am to 7pm</small>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Reserve</button>

@@ -13,8 +13,6 @@
                         <div class="card-header">Sorry</div>
                         <div class="card-body">
                             <p>Sorry there are no study houses matching your terms</p>
-
-
                         </div>
                     </div>
                 </div>
@@ -56,13 +54,6 @@
                                             <input type="number" min="1" class="form-control"
                                                    name="chairs">
                                         </div>
-                                        <div class="input-group ">
-                                            <label for="inputState">Hours</label>
-                                            <div class="input-group-prepend">
-                                                <input type="number" min="1" class="form-control"
-                                                    name="hours"  >
-                                            </div>
-                                        </div>
 
                                         <div class="input-group ">
                                             <label for="inputState">Date</label>
@@ -71,12 +62,20 @@
                                             </div>
                                         </div>
 
-                                        <label for="appt">Choose a time for your reservation:</label>
+                                        <label for="appt"> Reservation time:</label>
 
                                         <input type="time" id="appt" name="start"
-                                               min="07:00" max="19:00" required>
+                                               min="07:00" max="19:00" step="3600" required>
 
-                                        <small>Study house hours are 7am to 7pm</small>
+                                        <small>We open 7am to 7pm</small>
+
+                                        <div class="input-group ">
+                                            <label for="inputState">Hours</label>
+                                            <div class="input-group-prepend">
+                                                <input type="number" min="1" class="form-control"
+                                                       name="hours"  >
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Reserve</button>
@@ -89,3 +88,5 @@
         </div>
     @endif
 @endsection
+
+

@@ -48,7 +48,7 @@
                                     <input type="checkbox" name="drawing_table" value="1" id="drawing_table"><label for="drawing_table"> Drawing table </label>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Search Study Houses</button>
+                            q
                         </form>
 
                 </div>
